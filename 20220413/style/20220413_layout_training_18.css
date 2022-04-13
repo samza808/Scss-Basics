@@ -58,10 +58,12 @@
 #base > .root > .main {
   width: 100%;
   height: 90%;
+  border: 1px solid blue;
 }
 #base > .root > .main > div {
   width: 92%;
   height: 88%;
+  border: 1px solid seagreen;
   position: relative;
 }
 #base > .root > .main > div > div:nth-child(1) {
@@ -130,4 +132,133 @@
   font-size: 0.875rem;
   text-align: center;
   color: #394e80;
+}
+
+@media (max-width: 600px) {
+  .root {
+    width: 1440px;
+    height: 1024px;
+    border: 1px solid black;
+    overflow: hidden;
+  }
+  .root > .menu {
+    width: 100%;
+    height: 10%;
+    position: relative;
+  }
+  .root > .menu > .select-menu {
+    width: 80%;
+    height: 100%;
+    position: relative;
+  }
+  .root > .menu > .select-menu > div {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    right: 9%;
+  }
+  .root > .menu > .select-menu > div > div:nth-child(1) {
+    width: 100%;
+    height: 80%;
+    background-color: #737f9c;
+  }
+  .root > .menu > .select-menu > div > div:nth-child(2) {
+    width: 100%;
+    height: 20%;
+  }
+  .root > .menu > .select-menu > div > div:nth-child(2) > div {
+    width: 100%;
+    height: 34%;
+    background-color: #737f9c;
+    border-radius: 10%;
+  }
+  .root > .menu > .menu-text {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+  }
+  .root > .menu > .menu-text > span {
+    height: 100%;
+  }
+  .root > .menu > .menu-text > span > p {
+    font-weight: bold;
+  }
+  .root > .main {
+    width: 100%;
+    height: 90%;
+    border: 1px solid blue;
+  }
+  .root > .main > div {
+    width: 92%;
+    height: 88%;
+    border: 1px solid seagreen;
+    position: relative;
+  }
+  .root > .main > div > div:nth-child(1) {
+    width: 80%;
+    height: 82%;
+    background-color: #737f9c;
+    position: absolute;
+    right: -14%;
+    bottom: 10%;
+  }
+  .root > .main > div > div:nth-child(2) {
+    width: 100%;
+    height: 82%;
+    background-color: #c4e2e0;
+    position: relative;
+  }
+  .root > .main > div > div:nth-child(2) > div {
+    width: 92%;
+    height: 60%;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(1) {
+    width: 100%;
+    height: 40%;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(1) > div {
+    width: 10%;
+    height: 100%;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(1) > div > div {
+    width: 100%;
+    height: 30%;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(1) > div > div > i {
+    font-size: 1.5rem;
+    color: #737f9c;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) {
+    width: 80%;
+    height: 100%;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > div {
+    width: 50%;
+    height: 86%;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > div > p {
+    font-size: 6.375rem;
+    font-weight: bolder;
+    color: #e8eff1;
+    text-shadow: -5px 5px 2px #737f9c;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(2) {
+    width: 100%;
+    height: 14%;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(2) > div {
+    width: 20%;
+    height: 10%;
+    background-color: #737f9c;
+    border-radius: 30px;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(3) {
+    width: 100%;
+    height: 40%;
+  }
+  .root > .main > div > div:nth-child(2) > div > div:nth-child(3) > p {
+    font-size: 0.875rem;
+    text-align: center;
+    color: #394e80;
+  }
 }/*# sourceMappingURL=20220413_layout_training_18.css.map */
