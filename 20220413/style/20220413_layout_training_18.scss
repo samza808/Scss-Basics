@@ -1,0 +1,73 @@
+#base {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+
+  & > .root {
+    width: 390px;
+    height: 844px;
+    border: 1px solid black;
+    overflow: hidden;
+
+    & > .menu {
+      width: 100%;
+      height: 10%;
+      border: 1px solid red;
+
+      position: relative;
+
+      & > .select-menu {
+        width: 80%;
+        height: 100%;
+        border: 1px solid #13928c;
+        background-color: #13928c;
+
+        position: relative; 
+      }
+
+      & > .menu-text {
+        width: 80%;
+        height: 80%;
+        border: 1px solid red;
+
+        background-color: red;
+
+        position: absolute;
+      }
+    }
+
+    & > .main {
+      width: 100%;
+      height: 90%;
+      border: 1px solid blue;
+
+      & > div {
+        width: 92%;
+        height: 88%;
+        border: 1px solid seagreen;
+
+        position: relative;
+
+        & > div:nth-child(1) {
+          width: 80%;
+          height: 82%;
+          background-color: #737f9c;
+          
+          position: absolute;
+
+          right: -14%;
+          bottom: 10%;
+
+        }
+
+        & > div:nth-child(2) {
+          width: 100%;
+          height: 82%;
+          background-color: #c4e2e0;
+
+          position: relative;
+        }
+      }
+    }
+  }
+}
