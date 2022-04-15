@@ -13,8 +13,6 @@
   align-items: center;
   position: relative;
 }
-<<<<<<< HEAD
-=======
 #base > .root > .fillter {
   width: 30%;
   height: 10%;
@@ -22,7 +20,6 @@
   opacity: 0.4;
   position: absolute;
 }
->>>>>>> test-1
 #base > .root > header {
   width: 100%;
   height: 10%;
@@ -32,9 +29,6 @@
   bottom: 0;
   z-index: 5;
 }
-<<<<<<< HEAD
-#base > .root > .top {
-=======
 #base > .root > div {
   width: 100%;
   height: 100%;
@@ -43,25 +37,16 @@
   align-items: center;
 }
 #base > .root > div > .top {
->>>>>>> test-1
   width: 100%;
   height: 20%;
   border: 1px solid salmon;
 }
-<<<<<<< HEAD
-#base > .root > .center {
-=======
 #base > .root > div > .center {
->>>>>>> test-1
   width: 100%;
   height: 40%;
   border: 1px solid blue;
 }
-<<<<<<< HEAD
-#base > .root > .bottom {
-=======
 #base > .root > div > .bottom {
->>>>>>> test-1
   width: 100%;
   height: 40%;
   border: 1px solid gold;
