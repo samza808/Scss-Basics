@@ -62,13 +62,13 @@
       & > .top {
         width: 100%;
         height: 20%;
-        border: 1px solid salmon;
+        // border: 1px solid salmon;
         @include position(center, flex-end);
 
         & > div {
           width: 10%;
           height: 56%;
-          border: 1px solid red;
+          // border: 1px solid red;
           @include position(center, center);
           justify-content: space-around;
 
@@ -84,18 +84,19 @@
       & > .center {
         width: 100%;
         height: 54%;
-        border: 1px solid blue;
+        // border: 1px solid blue;
 
         & > div:nth-child(1) {
           width: 100%;
           height: 80%;
           // background-color: antiquewhite;
           @include position(center, center);
+          position: relative;
 
           & > div {
             width: 90%;
             height: 80%;
-            border: 1px solid green;
+            // border: 1px solid green;
             @include position(flex-end, center);
 
             & > .c-1 {
@@ -103,11 +104,9 @@
               height: 28%;
               background-color: #b84949;
               border-radius: 100%;
-            }
-  
-            & > div:nth-child(2) {
-              width: 100%;
-              height: 5%;
+              animation: 3s circle-1 infinite;
+              position: absolute;
+              bottom: 28%;
             }
   
             & > .c-2 {
@@ -115,6 +114,9 @@
               height: 21%;
               background-color: #5e8f4b;
               border-radius: 100%;
+              animation: 3s circle-2 infinite;
+              position: absolute;
+
             }
 
           }
@@ -123,13 +125,13 @@
         & div:nth-child(2){
           width: 100%;
           height: 20%;
-          border: 1px solid salmon;
+          // border: 1px solid salmon;
           @include position(center, center);
 
           & > div {
             width: 80%;
             height: 80%;
-            border: 1px solid greenyellow;
+            // border: 1px solid greenyellow;
             @include position(center, center);
 
             & > p {
@@ -143,13 +145,13 @@
       & > .bottom {
         width: 100%;
         height: 26%;
-        border: 1px solid gold;
+        // border: 1px solid gold;
         @include position(center, center);
 
         & > div:nth-child(1) {
           width: 90%;
           height: 20%;
-          border: 1px solid salmon;
+          // border: 1px solid salmon;
           @include position(center, center);
           justify-content: space-between;
 
@@ -180,7 +182,7 @@
         & > div:nth-child(2) {
           width: 90%;
           height: 90%;
-          border: 1px solid gold;
+          // border: 1px solid gold;
           @include position(center, center);
           justify-content: space-between;
 
