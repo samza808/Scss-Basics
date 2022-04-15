@@ -145,7 +145,7 @@
   height: 16%;
 }
 #base > .root > div:nth-child(4) > .bottom > div:nth-child(1) > div:nth-child(1) > hr {
-  height: 8px;
+  height: 6px;
   background-color: #9798a3;
   border: 0;
 }
@@ -155,7 +155,7 @@
 }
 #base > .root > div:nth-child(4) > .bottom > div:nth-child(1) > div:nth-child(2) > hr {
   border: none;
-  border-top: 10px dashed #43435e;
+  border-top: 6px dashed #43435e;
 }
 #base > .root > div:nth-child(4) > .bottom > div:nth-child(2) {
   width: 90%;
