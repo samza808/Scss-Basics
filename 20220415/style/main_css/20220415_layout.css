@@ -1,1 +1,39 @@
-/*# sourceMappingURL=20220415_layout.css.map */
+#base {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+#base > .root {
+  width: 390px;
+  height: 844px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#base > .root > header {
+  width: 100%;
+  height: 10%;
+  background-color: aquamarine;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+}
+#base > .root > .top {
+  width: 100%;
+  height: 20%;
+  border: 1px solid salmon;
+}
+#base > .root > .center {
+  width: 100%;
+  height: 40%;
+  border: 1px solid blue;
+}
+#base > .root > .bottom {
+  width: 100%;
+  height: 40%;
+  border: 1px solid gold;
+}/*# sourceMappingURL=20220415_layout.css.map */
