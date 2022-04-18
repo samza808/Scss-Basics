@@ -1,0 +1,220 @@
+@mixin position($justify, $align) {
+  justify-content: $justify;
+  align-items: $align;
+}
+
+#base {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  @include position(center, center);
+
+  & > .root {
+    width: 1440px;
+    height: 1024px;
+    background-color: aqua;
+    @include position(center, center);
+    flex-direction: column;
+
+    
+    & > header {
+      width: 100%;
+      height: 10%;
+      // border: 1px solid red;
+      background-color: #eeeeee;
+      @include position(center, center);
+
+      & > div {
+        width: 98%;
+        height: 80%;
+        // border: 1px solid goldenrod;
+
+        & > div {
+          width: 16%;
+          height: 100%;
+          background-color: #969696;
+        }
+      }
+    }
+
+    & > main {
+      width: 100%;
+      height: 80%;
+      // border: 1px solid blue;
+      @include position(center, center);
+      flex-direction: column;
+
+      & > div:nth-child(1) {
+        width: 100%;
+        height: 60%;
+        background-color: #d3d3d3;
+        @include position(center, center);
+
+        & > div {
+          width: 96%;
+          height: 94%;
+          // border: 1px solid salmon;
+          @include position(flex-end, flex-end);
+          position: relative;
+
+          & > div:nth-child(1) {
+            width: 30%;
+            height: 70%;
+            // border: 1px solid seagreen;
+            background-color: #363636;
+            position: relative;
+
+            & > div:nth-child(1) {
+              width: 100%;
+              height: 100%;
+              background-color: #6b6b6b;
+              position: absolute;
+              top: -12%;
+              left: -10%;
+            }
+
+            & > div:nth-child(2) {
+              width: 100%;
+              height: 100%;
+              background-color: #f3f3f3;
+              position: absolute;
+              top: -24%;
+              left: -20%;
+            }
+          }
+
+          & > div:nth-child(2) {
+            width: 56%;
+            height: 50%;
+            // border: 1px solid palegreen;
+            background-color: #969696;
+            position: relative;
+            top: -74%;
+            margin-left: 1%;
+            @include position(center, center);
+
+            & > div {
+              width: 94%;
+              height: 90%;
+              // border: 1px solid plum;
+              @include position(center, center);
+              justify-content: space-between;
+
+              & > div {
+                width: 24%;
+                height: 100%;
+                // border: 1px solid red;
+                background-color: #cfcfcf;
+                @include position(center, center);
+
+                & > ul {
+                  width: 60%;
+                  height: 70%;
+                  // border: 1px solid palevioletred;
+                  font-size: 1.5rem;
+                  flex-direction: column;
+                  @include position(center, center);
+                  justify-content: space-between;
+
+                  & > li {
+                    list-style: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      & > div:nth-child(2) {
+        width: 100%;
+        height: 40%;
+        background-color: #afafaf;
+        @include position(center, center);
+
+
+        & > div {
+          width: 96%;
+          height: 88%;
+          // border: 1px solid gold;
+          @include position(center, center);
+          justify-content: space-between;
+
+          & > div {
+            width: 32.6%;
+            height: 100%;
+            background-color: #cfcfcf;
+            @include position(center, center);
+
+            &:nth-child(1) > div {
+              width: 84%;
+              height: 90%;
+              // border: 1px solid red;
+              position: relative;
+
+              & > div {
+                width: 60%;
+                height: 80%;
+                // border: 1px solid blue;
+                background-color: #969696;
+                @include position(center, center);
+
+                & > div {
+                  width: 90%;
+                  height: 90%;
+                  // border: 1px solid salmon;
+                  @include position(center, center);
+                  justify-content: space-between;
+                  flex-direction: column;
+
+                  & > div {
+                    width: 100%;
+                    height: 30%;
+                    background-color: #cfcfcf;
+                  }
+
+                  & > div:nth-child(2) {
+                    height: 64%;
+                  }
+                }
+              }
+
+              & > div:nth-child(2) {
+                // border: 1px solid #30ff64;
+                background-color: #464646;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & > footer {
+      width: 100%;
+      height: 10%;
+      // border: 1px solid gold;
+      background-color: #777777;
+      @include position(center, center);
+
+      & > div {
+        width: 96%;
+        height: 74%;
+        // border: 1px solid violet;
+        justify-content: space-between;
+
+        & > div {
+          width: 28%;
+          height: 100%;
+          background-color: #d6d6d6;
+        }
+
+        & > div:nth-child(2) {
+          width: 42%;
+        }
+      }
+    }
+  }
+}
