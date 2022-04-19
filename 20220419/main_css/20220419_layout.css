@@ -22,18 +22,52 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 #base > .root > .top {
   width: 100%;
   height: 90%;
-  border: 1px solid salmon;
   position: absolute;
   bottom: -24%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 3;
+}
+#base > .root > .top > div {
+  width: 90%;
+  height: 42%;
+  background-color: rgba(78, 78, 78, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 10%;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#base > .root > .top > div > div {
+  width: 80%;
+  height: 74%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#base > .root > .top > div > div > div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#base > .root > .top > div > div > div > span {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--main-color-2);
 }
 #base > .root > .bottom {
   width: 80%;
   height: 80%;
-  border: 1px solid violet;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -42,7 +76,6 @@
 #base > .root > .bottom > div {
   width: 100%;
   height: 40%;
-  border: 1px solid blue;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -51,13 +84,25 @@
 #base > .root > .bottom > div > .dot {
   width: 10%;
   height: 36%;
-  border: 1px solid yellowgreen;
   position: absolute;
+}
+#base > .root > .bottom > div > .dot > div {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+#base > .root > .bottom > div > .dot > div > div {
+  width: 52%;
+  height: 16%;
+  background-color: var(--main-color-3);
+  border-radius: 100%;
 }
 #base > .root > .bottom > div > .circle {
   width: 100%;
   height: 100%;
-  border: 1px solid gold;
   position: relative;
   bottom: 0%;
 }
@@ -71,8 +116,8 @@
 }
 #base > .root > .bottom > div > .circle > div:nth-child(2) {
   width: 78%;
-  height: 86%;
-  border: 1px solid var(--c-color-2);
+  height: 88%;
+  border: 3px solid var(--c-color-2);
   border-radius: 100%;
   position: absolute;
   z-index: 2;

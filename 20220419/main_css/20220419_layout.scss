@@ -31,40 +31,91 @@
     background-color: var(--main-color-1);
     @include position(center, center);
     position: relative;
+    overflow: hidden;
 
     & > .top {
       width: 100%;
       height: 90%;
-      border: 1px solid salmon;
+      // border: 1px solid salmon;
       position: absolute;
       bottom: -24%;
+      @include position(flex-start, center);
+      z-index: 3;
+
+
+      & > div {
+        width: 90%;
+        height: 42%;
+        background-color: rgba($color: rgb(78, 78, 78), $alpha: 0.4);
+        backdrop-filter: blur(5px);
+        border-radius: 10%;
+        margin-bottom: 0.8rem;
+        @include position(center, center);
+
+        & > div {
+          width: 80%;
+          height: 74%;
+          // border: 1px solid salmon;
+          @include position(flex-start, center);
+
+
+          & > div {
+            width: 50%;
+            height: 100%;
+            // border: 1px solid yellow;
+            @include position(flex-start, center);
+
+
+            & > span {
+              font-size: 2.4rem;
+              font-weight: bold;
+              color: var(--main-color-2);
+            }
+          }
+        }
+      }
     }
 
     & > .bottom {
       width: 80%;
       height: 80%;
-      border: 1px solid violet;
+      // border: 1px solid violet;
       @include position(center, flex-start);
       position: relative;
 
       & > div {
         width: 100%;
         height: 40%;
-        border: 1px solid blue;
+        // border: 1px solid blue;
         @include position(flex-start, flex-end);
         position: relative;
 
         & > .dot {
           width: 10%;
           height: 36%;
-          border: 1px solid yellowgreen;
+          // border: 1px solid yellowgreen;
           position: absolute;
+
+          & > div {
+            width: 50%;
+            height: 50%;
+            // border: 1px solid red;
+            @include position(center, flex-start);
+            @include space(space-around);
+
+            & > div {
+              width: 52%;
+              height: 16%;
+              background-color: var(--main-color-3);
+              border-radius: 100%;
+            }
+          }
         }
 
         & > .circle {
           width: 100%;
           height: 100%;
-          border: 1px solid gold;
+          // border: 1px solid gold;
           position: relative;
           bottom: 0%;
 
@@ -79,8 +130,8 @@
 
           & > div:nth-child(2) {
             width: 78%;
-            height: 86%;
-            border: 1px solid var(--c-color-2);
+            height: 88%;
+            border: 3px solid var(--c-color-2);
             border-radius: 100%;
             position: absolute;
             z-index: 2;
