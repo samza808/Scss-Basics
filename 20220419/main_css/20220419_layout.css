@@ -1,0 +1,13 @@
+:root {
+  --main-color-1: #333;
+  --main-color-2: #fff;
+  --main-color-3: #C4C4C4;
+  --c-color-1: #FF6464;
+  --c-color-2: #FFC83A;
+}
+
+#base {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color-2);
+}/*# sourceMappingURL=20220419_layout.css.map */
