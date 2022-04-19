@@ -108,7 +108,7 @@
 }
 #base > .root > .bottom > div > .circle > div:nth-child(1) {
   width: 56%;
-  height: 62%;
+  height: 64%;
   background-color: var(--c-color-1);
   border-radius: 100%;
   position: absolute;
