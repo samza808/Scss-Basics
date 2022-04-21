@@ -1,0 +1,16 @@
+@mixin position($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin space($space-type) {
+  justify-content: $space-type;
+}
+// space-around space-between space-evenly
+
+:root {
+  --main-color-1: #fff;
+  --main-color-2: #545454;
+  --main-color-3: #000000;
+}
