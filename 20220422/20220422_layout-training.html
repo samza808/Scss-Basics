@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    #base {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .root {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  </style>
+  
+</head>
+<body>
+  
+  <div id="base">
+    <div class="root">
+      (div)
+    </div>
+  </div>
+  
+  <script>
+
+    document.body.style.padding = "0";
+    // 
+    document.body.style.margin = "0";
+    // 
+    const base = document.getElementById("base");
+    // 
+    let baseWidth = 100;
+    // 
+    let baseHeight = 100;
+    // 
+    base.style.width = `${baseWidth}vw`;
+    // 
+    base.style.height = `${baseHeight}vh`;
+    // 
+    base.style.backgroundColor = "#fff";
+
+    // -----------
+    const root = document.getElementsByClassName("root");
+    //
+    console.log(root);
+    //
+    let divWidth = 300;
+    //
+    let divHeight = 300;
+    //
+    root[0].style.width = `${divWidth}px`;
+    //
+    root[0].style.height = `${divHeight}px`;
+    //
+    root[0].style.backgroundColor = "#4e4e4e";
+    //
+    root[0].style.borderRadius = "100%"
+    //
+    root[0].style.color = "#fff";
+
+  </script>
+</body>
+</html>
