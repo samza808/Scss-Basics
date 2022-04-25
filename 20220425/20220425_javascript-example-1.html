@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #333;
+    }
+
+    #root > div {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #ccc;
+      color: #fff;
+    }
+    
+  </style>
+</head>
+<body>
+  
+
+  <div id="root">
+    <div>1</div>
+    <div>2</div>
+  </div>
+  
+  <script>
+
+    const root = document.getElementById('root');
+    console.log(root);
+    console.dir(root);
+    
+    console.dir(root.children[0]);
+    const one = root.children[0]; //text node에 문자열 1이라고 써있는 애
+    const two = root.children[1]; //text node에 문자열 2라고 써있는 애
+
+    // const two = root.children[1]; < 이 방법이 더 권장되긴 함
+    // const test = document.querySelector('#root.div:nth-child(2)');
+    // 둘은 같은 수식
+
+    two.textContent = '이것은 두번째 상자이다.'
+    console.log(typeof two.textContent);
+
+    // event : '무슨일이 일어났다'
+
+    one.addEventListener('click', function() {
+      two.style.transition = '1s';
+      two.textContent = "클릭!";
+      two.style.backgroundColor = "#ff6666";
+      two.style.width = "200px";
+
+      if(two.style.backgroundColor = "rgb(255, 102, 102") {
+        two.style.backgroundColor = "blue";
+      }
+    });
+
+  </script>
+
+</body>
+</html>

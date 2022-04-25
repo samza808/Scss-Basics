@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="base">
+    <div class="root">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  
+</body>
+
+<script>
+
+  const base = document.getElementById('base');
+  const root = document.getElementsByClassName('root');
+
+  console.log(base);
+  console.log(root);
+
+  base.style.width = '100vw';
+  base.style.height = '100vh';
+  base.style.display = 'flex';
+  base.style.justifyContent = 'center';
+  base.style.alignItems = 'center';
+  //
+
+  root[0].style.width = '360px';
+  root[0].style.height = '120px';
+  root[0].style.border = '1px solid red';
+  root[0].style.display = 'flex';
+  root[0].style.justifyContent = 'space-around';
+  root[0].style.alignItems = 'center';
+
+  //
+
+  const one = root[0].children[0];
+  const two = root[0].children[1];
+  const three = root[0].children[2];
+
+
+//   one.style.width = '100px';
+//   one.style.height = '100px';
+//   one.style.backgroundColor = 'red';
+// //
+//   two.style.width = '100px';
+//   two.style.height = '100px';
+//   two.style.backgroundColor = 'red';
+// //
+//   three.style.width = '100px';
+//   three.style.height = '100px';
+//   three.style.backgroundColor = 'red';
+
+
+for(let boxs = 0; boxs < root[0].children.length; boxs++) {
+    root[0].children[boxs].style.width = '100px';
+    root[0].children[boxs].style.height = '100px';
+    root[0].children[boxs].style.backgroundColor = 'red';
+  }
+
+</script>
+</html>
