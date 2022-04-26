@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+    const arr = ['피카츄', '라이츄', '김주은', '꼬부기'];
+    const test = ['피카츄', '라이츄', '파이리', '꼬부기'];
+    console.log(arr[2] === test[2]);
+
+    if(arr[2] === test[2]) {
+      console.log("야호!");
+    } else {
+      test[2] = '김주은';
+      console.log(test);
+    } // 16번 행의 if() 영역이다
+
+// 자바스크립트는 위에서 부터 읽어내린다.
+// 위의 if와 아래의 if는 다른 로직(논리)고 둘은 전혀 관계가 없다.(같지 않다)
+
+    if(arr[2] === test[2]) {
+      arr[2] = '비둘기';
+      test[2] = '비둘기';
+      console.log(arr);
+      console.log(test);
+    } else {
+      console.log('메롱');
+    }
+
+  </script>
+  
+</body>
+</html>
