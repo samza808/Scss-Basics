@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="root">
+    <button>click</button>
+  </div>
+
+  <script>
+
+    // const test = document.querySelector('#root > button');
+
+    const root = document.getElementById('root');
+    console.dir(root);
+
+    const clickBtn = root.children[0]; //권장방식
+    console.log(clickBtn);
+
+    let bgColorValue = 333;
+
+    root.style.width = '100vw';
+    root.style.height = '100vh';
+    root.style.backgroundColor = `#${bgColorValue}`;
+    
+
+    let data = true; // 스위치를 달아주고 온/오프 알고리즘만 돌려준다.
+
+    clickBtn.addEventListener('click', function() {
+      // console.log('hello');
+      // console.log(root.style.backgroundColor);
+
+      if(data === true) {
+        console.log('data 값은 :' + data);
+        data = false;
+        root.style.backgroundColor = 'salmon';
+        root.children[0].textContent = 'night';
+      } else { // else의 영역 data !== true, data === false
+        console.log('지금 else로 data 값은 :' + data);
+        data = true;
+        root.style.backgroundColor = 'blue';
+        root.children[0].textContent = 'day';
+
+      }
+    });
+    
+  </script>
+  
+</body>
+</html>
