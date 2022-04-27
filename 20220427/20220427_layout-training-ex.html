@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="root">
+    <button id="click-button">click</button>
+    <div>회색바</div>
+  </div>
+
+
+  <script>
+
+    const root = document.getElementById('root');
+    console.dir(root);
+
+    const grayBar = root.children[1];
+    console.dir(grayBar);
+
+    const clickBnt = document.getElementById('click-button');
+
+    clickBnt.addEventListener('click', function() {
+      console.log('test');
+
+      let value = 1;
+      for(let i = 0; i < value; i++) {
+        let mackSection = document.createElement('section');
+        mackSection.innerHTML = 'hello' + i;
+        grayBar.appendChild(mackSection);
+      }
+    });
+
+    
+  </script>
+  
+</body>
+</html>

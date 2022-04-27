@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button id="button-1">증가</button>
+  <button id="button-2">감소</button>
+
+  <h1>hello jabascript!</h1>
+  
+
+  <script>
+    let fontSizeValue = '1';
+//
+    const h1 = document.querySelector('h1');
+    console.dir(h1);
+    h1.style.fontSize = `${fontSizeValue}px`;
+//
+    const bntOne = document.getElementById('button-1');
+    console.dir(bntOne);
+//
+    const bntTwo = document.getElementById('button-2');
+    console.dir(bntTwo);
+//
+    bntOne.addEventListener('click', function() {
+      // console.log('hello');
+      fontSizeValue++;
+      console.log(fontSizeValue);
+      h1.style.fontSize = `${fontSizeValue}rem`
+    });
+//
+    bntTwo.addEventListener('click', function() {
+      // console.log('bye');
+      fontSizeValue--;
+      console.log(fontSizeValue);
+      h1.style.fontSize = `${fontSizeValue}rem`
+    });
+  </script>
+  
+</body>
+</html>
