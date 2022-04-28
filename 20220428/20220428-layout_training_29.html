@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>29</title>
+</head>
+<body>
+  
+  <div id="base">
+    <div class="root">
+      <div class="magin">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    let boxWidth = '100';
+    //
+
+    const base = document.getElementById('base');
+    console.dir(base);
+
+    base.style.width = `${boxWidth}vw`;
+    base.style.height = `${boxWidth}vh`;
+    base.style.display = 'flex';
+    base.style.justifyContent = 'center';
+    base.style.alignItems = 'center';
+
+    //
+
+    const root = document.getElementsByClassName('root');
+    console.dir(root);
+
+    root[0].style.width = `${boxWidth*4}px`;
+    root[0].style.height = `${boxWidth*4}px`;
+    root[0].style.border = '1px solid black';
+    root[0].style.display = 'flex';
+    root[0].style.justifyContent = 'center';
+    root[0].style.alignItems = 'center';
+
+    //
+
+    const magin = document.getElementsByClassName('magin');
+    console.dir(magin[0].style);
+
+    magin[0].style.width = '80%';
+    magin[0].style.height = '80%';
+    // magin[0].style.border = '1px solid red';
+    magin[0].style.position = 'relative';
+
+    //
+    for(let box = 0; box < magin[0].children.length; box++) {
+    magin[0].children[box].style.width = `${boxWidth*2}px`;
+    magin[0].children[box].style.height = `${boxWidth*2}px`;
+    magin[0].children[box].style.backgroundColor = '#c5c5c5';
+    magin[0].children[box].style.border= '1px solid black';
+    magin[0].children[box].style.position = 'absolute';
+    magin[0].children[box].style.zIndex = '1';
+    
+    if(magin[0].children[1]) {
+      magin[0].children[1].style.backgroundColor= 'blue';
+      magin[0].children[1].style.right = '20%';
+      magin[0].children[1].style.bottom = '20%';
+    }
+
+    if(magin[0].children[2]) {
+      magin[0].children[2].style.backgroundColor= 'aqua';
+      magin[0].children[2].style.right = '0%';
+      magin[0].children[2].style.bottom = '0%';
+    }
+
+    let data = true;
+    let topPosition = [magin[0].children.length];
+    const boxs = magin[0].children[box]
+  
+      boxs.addEventListener('click', function() {
+        // console.log('test');
+        
+        if(data === true) {
+        console.log('data 값은 :' + data);
+        data = false;
+        boxs.style.zIndex = topPosition;
+      } else {
+        console.log('지금 else로 data 값은 :' + data);
+        data = true;
+        boxs.style.zIndex = '0';
+      }
+
+      });
+
+  }
+
+  
+    //
+
+  </script>
+  
+</body>
+</html>
