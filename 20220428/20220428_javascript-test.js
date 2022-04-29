@@ -8,7 +8,7 @@
 // console.log(one+two);
 // console.log(two+three);
 
-//-----------
+//----------- 사용자 함수 ----------------
 
 // function sum(front, back) { //매개변수
 
@@ -18,7 +18,7 @@
 
 // console.log(sum(1,2));
 
-//-----------
+//----------------------------------------
 
 function sum(front, back) {
 
