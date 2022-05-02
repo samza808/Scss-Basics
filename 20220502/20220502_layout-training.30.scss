@@ -51,24 +51,21 @@
         align-items: center;
         justify-content: center;
 
-        & > div:nth-child(1) {
+        & > div {
           width: 60%;
           height: 72%;
           background-color: #c5c5c5;
-          position: absolute;
           border-radius: 34%;
           transform: rotate(45deg);
+        }
+
+        & > div:nth-child(1) {
+          position: absolute;
           left: 10%;
           bottom: 6%;
         }
 
         & > div:nth-child(2) {
-          width: 60%;
-          height: 72%;
-          border-radius: 34%;
-          transform: rotate(45deg);
-          background-color: #c5c5c5;
-          z-index: 0;
           position: relative;
           left: 24%;
           top: -6%;
@@ -97,7 +94,7 @@
         align-items: flex-end;
 
         & > div {
-          width: 70%;
+          width: 56%;
           height: 14%;
           // border: 1px solid salmon;
 
@@ -110,8 +107,8 @@
             align-items: center;
 
             & > div {
-              width: 19%;
-              height: 28%;
+              width: 21%;
+              height: 25%;
               background-color: #c5c5c5;
               border-radius: 100%;
             }
