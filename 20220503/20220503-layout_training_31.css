@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#base {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#base > .root {
+  width: 1400px;
+  height: 300px;
+  position: relative;
+}
+#base > .root > .top {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+#base > .root > .top > div {
+  width: 100%;
+  height: 34%;
+  background-color: #fff;
+}
+#base > .root > .top > div:nth-child(2) {
+  height: 45%;
+}
+#base > .root > .bottom {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#base > .root > .bottom > div {
+  width: 100%;
+  height: 40%;
+  font-family: "Roboto", sans-serif;
+  font-size: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#base > .root > .bottom > div > .angle {
+  transform: rotate(180deg);
+}
+#base > .root > .bottom > div > .double {
+  position: relative;
+  top: -35%;
+}
+#base > .root > .bottom > div > .double > div:nth-child(1) {
+  position: relative;
+  top: 0%;
+}
+#base > .root > .bottom > div > .double > div:nth-child(2) {
+  position: absolute;
+  top: 39%;
+}/*# sourceMappingURL=20220503-layout_training_31.css.map */
