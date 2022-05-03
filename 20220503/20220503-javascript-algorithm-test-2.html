@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./20220503-layout_training_31.css">
+  <title>다크모드 온오프</title>
+</head>
+<body>
+  
+  <div id="base">
+    <div class="root">
+
+      <div class="top">
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="bottom">
+        <div class="text">
+
+          <div>WH</div>
+          <div class="angle">A</div>
+          <div>TEVERY</div>
+          <div class="double">
+            <div>O</div>
+            <div>O</div>
+          </div>
+          <div class="angle">U</div>
+          <div>W</div>
+          <div class="angle">A</div>
+          <div>NT</div>
+
+        </div>
+      </div>
+      
+    </div>
+
+    <button id="button">night</button>
+  </div>
+  
+
+  <script>
+
+const base = document.getElementById('base');
+
+const up = document.getElementsByClassName('top');
+console.dir(up);
+
+const text = document.getElementsByClassName('text');
+console.dir(text);
+
+const clickBut = document.getElementById('button');
+console.dir(clickBut);
+clickBut.style.fontSize = '1.5rem';
+
+
+let a = true;
+let night = '#000';
+let morning = '#fff'
+
+clickBut.addEventListener('click', function() {
+  // console.log('hello');
+
+  if(a === true) {
+    console.log('on');
+
+    base.style.backgroundColor = night;
+    for(let i = 0; i < up[0].children.length; i++) {
+          up[0].children[i].style.backgroundColor = night;
+        }
+    text[0].style.color = morning;
+    clickBut.textContent = 'morning';
+    a = false;
+
+  } else {
+    console.log('off');
+
+    base.style.backgroundColor = morning;
+    for(let i = 0; i < up[0].children.length; i++) {
+          up[0].children[i].style.backgroundColor = morning;
+        }
+    text[0].st
+    text[0].style.color = night;
+    clickBut.textContent = 'night';
+
+
+    a = true;
+
+
+  }
+
+});
+
+  </script>
+  
+</body>
+</html>
