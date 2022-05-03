@@ -25,6 +25,7 @@ const base = document.getElementById('base');
 console.dir(base);
 base.style.width = '100vw'
 base.style.height = '100vh'
+base.style.backgroundColor = '#fc5956'
 
 const clickBut = base.children[0];
 console.dir(clickBut);
@@ -52,9 +53,9 @@ let data = true;
 clickBut.addEventListener('click', function() {
 
   if(data === true) {
-    a++;
     console.log(data);
     console.log(a);
+    a++;
     base.style.transition = '1s';
 
     if(a >= randomColor.length-1) {

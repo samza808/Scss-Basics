@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="base">
+    <button>A</button>
+    <h1>피카츄</h1>
+  </div>
+
+  
+  <script>
+    document.body.style.padding = 0;
+    document.body.style.margin = 0;
+
+    const base = document.getElementById('base');
+    base.style.width = '100vw';
+    base.style.height = '100vh';
+
+    const butA = base.children[0]
+    butA.style.width = '100px';
+    butA.style.height = '30px';
+
+    const h1 = base.children[1]
+    console.dir(h1);
+
+
+    let pokeMon = ['피카츄', '라이츄', '파이리', '꼬부기', '버터플', '야도란', '피죤투', '또가스'];
+    let a = 0;
+    let data = true;
+    
+    butA.addEventListener('click', function() {
+      console.log('ok');
+
+      if(data === true) {
+        a++
+        console.log(data);
+        console.log(a);
+        h1.textContent = pokeMon[a];
+
+        if(a >= pokeMon.length-1) {
+          data = false;
+        }
+      } else {
+        a = pokeMon.length-1;
+        console.log(data);
+        console.log(a);
+        data = true;
+        butA.style.display = 'none';
+        h1.textContent = '포켓몬스터를 다 모았다!';
+
+      }
+
+    });
+
+
+  </script>
+  
+</body>
+</html>
