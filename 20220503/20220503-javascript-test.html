@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>햄버거메뉴 원리 기본</title>
+</head>
+<body>
+
+  <button>클릭</button>
+  
+  <ul id="root">
+
+    <li class="menu-items">menu-1</li>
+    <li class="menu-items">menu-2</li>
+    <li class="menu-items">menu-3</li>
+    <li class="menu-items">menu-4</li>
+    <li class="menu-items">menu-5</li>
+    <li class="menu-items">menu-6</li>
+    <li class="menu-items">menu-7</li>
+    <li class="menu-items">menu-8</li>
+    <li class="menu-items">menu-9</li>
+    <li class="menu-items">menu-10</li>
+
+  </ul>
+
+
+
+
+  <script>
+    
+    const root = document.getElementById('root');
+    console.dir(root);
+
+    const liItems = document.querySelectorAll('.menu-items')
+    console.log(liItems);
+
+    const clickBut = document.querySelector('button');
+
+    root.style.width = '300px';
+    root.style.height = '500px';
+    root.style.backgroundColor = 'aqua';
+
+    let isStatus = true;
+    clickBut.addEventListener('click', function() {
+
+      if(isStatus === true) {
+        console.log('hello');
+        isStatus = false;
+
+        for(let i = 0; i < liItems.length; i++) {
+          liItems[i].style.display = 'none';
+        }
+
+        root.style.display = 'none';
+
+      } else {
+        console.log('bye')
+        isStatus = true;
+
+        for(let i = 0; i < liItems.length; i++) {
+          liItems[i].style.display = 'block';
+        }
+
+        root.style.display = 'block';
+
+      }
+
+    });
+    
+  </script>
+
+</body>
+</html>

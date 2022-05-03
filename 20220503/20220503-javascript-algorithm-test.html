@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>무지개색 총공격이다</title>
+</head>
+<body>
+  
+
+<div id="base">
+  <button id="click-button">버튼</button>
+</div>
+  
+</body>
+
+
+<script>
+
+document.body.style.padding = 0;
+document.body.style.margin = 0;
+
+const base = document.getElementById('base');
+console.dir(base);
+base.style.width = '100vw'
+base.style.height = '100vh'
+
+const clickBut = base.children[0];
+console.dir(clickBut);
+
+
+// clickBut.addEventListener('click', function() {
+//   // console.log('test');
+
+//   if(data === true){
+//     console.log('참')
+//     data = false;
+//     base.style.backgroundColor = '#000';
+//   } else {
+//     console.log('거짓')
+//     data = true;
+//     base.style.backgroundColor = '#fff';
+//   }
+// });
+
+let randomColor = ['#fc5956', '#fc8e5b', '#ffefb9', '#bfdd82', '#39a693', '#37889b', '#906381'];
+let a = 0;
+let data = true;
+
+
+clickBut.addEventListener('click', function() {
+
+  if(data === true) {
+    a++;
+    console.log(data);
+    console.log(a);
+    base.style.transition = '1s';
+
+    if(a >= randomColor.length-1) {
+      data = false;
+    } 
+    base.style.backgroundColor = randomColor[a];
+  } else {
+    a = 0;
+    console.log(data);
+    console.log(a);
+
+    if (a <= 0) {
+      data = true;
+    }
+
+    base.style.backgroundColor = randomColor[a];
+
+  }
+
+
+});
+
+</script>
+</html>
