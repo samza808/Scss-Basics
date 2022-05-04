@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./20220504-layout-training-32.css">
+  <title>32</title>
+</head>
+<body>
+  
+
+  <div id="base">
+    <div class="root">
+      <div class="top">
+        <div>
+
+          <div class="main-text"></div>
+
+          <div class="shape">
+            <div></div>
+            <div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div>
+          <div>
+            <div class="squares">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam quidem, illo, quam eos minus iure vitae consequatur, quae architecto a distinctio dolor laboriosam aperiam expedita ducimus eveniet illum porro necessitatibus laborum magnam quis atque dicta error temporibus! Laborum fugit repellat sapiente consequatur quod dolorem perspiciatis, rerum sunt alias veritatis error amet ea consequuntur harum corrupti dolor eius placeat? Dicta id praesentium non blanditiis, voluptatibus illo dolores inventore neque, at quibusdam tempore ipsam odio esse consequuntur deserunt beatae ipsa? Error doloremque tenetur temporibus laborum amet dolorem fuga praesentium! Neque voluptates ab cumque omnis numquam laborum! Aut libero in accusamus numquam ea!</div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos facere fuga adipisci in debitis dicta cupiditate maiores perspiciatis amet laborum, recusandae asperiores voluptates exercitationem quo animi sint esse. Libero necessitatibus nulla atque, vitae cum pariatur quam veritatis quisquam quasi explicabo fugiat ratione placeat perspiciatis consequatur quas. Magni sapiente officiis earum recusandae aspernatur odit, maiores nemo explicabo molestias beatae. Quisquam reiciendis eaque modi, minus laudantium, alias debitis excepturi quaerat repellendus, quod maiores officia dignissimos. Veniam eligendi alias facilis libero dolores inventore explicabo, quae placeat ducimus enim omnis sit, non ipsum suscipit. Possimus cupiditate nobis, deserunt nesciunt inventore explicabo, quae placeat ducimus enim omnis sit vitae tempora corporis vero cumque.</div>
+          </div>
+        </div>
+
+        <div>
+          <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium vel sed cumque omnis modi iste molestiae soluta, eum ea nisi distinctio recusandae maiores porro nobis impedit? Necessitatibus praesentium nostrum maiores corrupti vitae voluptas, temporibus cum doloribus molestiae excepturi! Ex consequuntur at rerum minus animi accusantium doloribus culpa inventore vitae cumque? Dolorem esse laboriosam nulla corporis, accusantium adipisci laborum! Architecto quasi corrupti obcaecati reiciendis officia iusto dolor a velit eum explicabo! Esse natus, velit officia quas assumenda earum odit at deleniti necessitatibus molestias aspernatur itaque veniam minima, laboriosam voluptatem. Fugiat unde labore quasi a repudiandae est natus doloribus facere eos et accusantium voluptate, laboriosam eum rerum provident cum dignissimos harum. Voluptatem cum necessitatibus assumenda repellendus animi, amet, magnam saepe eius voluptatibus reprehenderit quos qui vero ratione at voluptate ipsum.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  
+</body>
+
+<script>
+
+document.body.style.padding = 0;
+document.body.style.margin = 0;
+
+const base = document.getElementById('base');
+console.dir(base);
+base.style.width = '100vw';
+base.style.height = '100vh';
+base.style.display = 'flex';
+base.style.justifyContent = 'center';
+base.style.alignItems = 'center';
+//
+const root = document.getElementsByClassName('root');
+console.dir(root);
+root[0].style.width = '1920px';
+root[0].style.height = '1080px';
+root[0].style.border = '1px solid red';
+root[0].style.display = 'flex';
+root[0].style.justifyContent = 'center';
+root[0].style.alignItems = 'center';
+root[0].style.position = 'relative';
+//
+const topSide = document.getElementsByClassName('top');
+console.dir(topSide);
+topSide[0].style.width = '100%';
+topSide[0].style.height = '100%';
+topSide[0].style.position = 'absolute';
+topSide[0].style.zIndex = '1';
+
+//
+const bottom = document.getElementsByClassName('bottom');
+console.dir(bottom);
+bottom[0].style.width = '100%';
+bottom[0].style.height = '100%';
+bottom[0].style.border = '1px solid blue';
+bottom[0].style.display = 'flex';
+bottom[0].style.justifyContent = 'center';
+bottom[0].style.alignItems = 'center';
+bottom[0].style.position = 'relative';
+//
+
+const squares = document.getElementsByClassName('squares');
+console.dir(squares);
+
+for(let a = 0; a < squares[0].children.length; a++) {
+  squares[0].children[a].style.width = '100%';
+  squares[0].children[a].style.height= '15%';
+  squares[0].children[a].style.backgroundColor = '#4F4F4F';
+
+
+
+}
+
+</script>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>똑딱이</title>
+</head>
+<body>
+  
+
+  <div id="base">
+
+    <button class="but-a">A</button>
+    
+    <button class="but-b">B</button>
+
+  </div>
+
+  
+  <script>
+
+    const base = document.getElementById('base');
+    console.dir(base);
+    base.style.width = '100vw';
+    base.style.height = '100vh';
+
+    const butA = document.getElementsByClassName('but-a');
+    console.log(butA);
+
+    const butB = document.getElementsByClassName('but-b');
+    console.log(butB);
+
+    let count = 0;
+    let power = true
+
+    butA[0].addEventListener('click', function() {
+      
+      let timer = setInterval(function() {
+        console.log(count);
+        count++;
+      }, 1000);
+
+      if(count === 0) {
+        power = true;
+
+        if(power === true) {
+          console.log('ok');
+        }
+      } else {
+        count--;
+      }
+
+      if(count === 1) {
+        power = false;
+
+      }
+
+    });
+
+
+
+  </script>
+
+</body>
+</html>

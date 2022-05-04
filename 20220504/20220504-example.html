@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바 연습</title>
+</head>
+<body>
+  
+  <button class="click-button">click</button>
+
+  
+<script>
+
+  const clickBut = document.getElementsByClassName('click-button');
+  console.dir(clickBut);
+
+  let stringHello = 'hello';
+  //문자열은 '배열' 이다
+
+  clickBut[0].addEventListener('click', function() {
+    // console.log('확인');
+
+    for(let i = 0; i <= 55; i++) {
+      console.log(stringHello[0]);
+    }
+
+  });
+
+
+</script>
+
+</body>
+</html>
