@@ -15,7 +15,6 @@
 #base > .root > .top > div {
   width: 60%;
   height: 80%;
-  border: 1px solid salmon;
   position: relative;
   display: flex;
   justify-content: center;
@@ -23,22 +22,47 @@
 }
 #base > .root > .top > div > .main-text {
   width: 100%;
-  height: 60%;
+  height: 48%;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#base > .root > .top > div > .main-text > div {
+  font-size: 10.5rem;
+  color: var(--basecolor-1);
+  font-family: "Saira Stencil One", cursive;
 }
 #base > .root > .top > div > .shape {
   width: 100%;
   height: 100%;
-  background-color: #30abfd;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #base > .root > .top > div > .shape > div {
-  width: 60%;
-  height: 50%;
+  width: 75%;
+  height: 70%;
   background-color: var(--basecolor-6);
-  transform: skew(40deg);
-  border-radius: 30% 30% 20% 50%;
+  transform: skew(-30deg, 15deg);
+  border-radius: 40% 50% 25% 30%;
+}
+#base > .root > .top > div > .shape > div:nth-child(1) {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 15%;
+  opacity: 0.8;
+}
+#base > .root > .top > div > .shape > div:nth-child(2) {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  opacity: 0.7;
+  filter: blur(20px);
 }
 #base > .root > .bottom > div {
   height: 100%;
@@ -53,7 +77,6 @@
 #base > .root > .bottom > div:nth-child(1) > div {
   width: 64%;
   height: 90%;
-  border: 1px solid salmon;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -61,7 +84,6 @@
 #base > .root > .bottom > div:nth-child(1) > div > .squares {
   width: 100%;
   height: 80%;
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,7 +99,6 @@
 #base > .root > .bottom > div:nth-child(2) > div {
   width: 92%;
   height: 90%;
-  border: 1px solid blueviolet;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -85,7 +106,6 @@
 #base > .root > .bottom > div:nth-child(2) > div > div {
   width: 100%;
   height: 30%;
-  border: 1px solid blue;
   text-align: justify;
 }
 #base > .root > .bottom > div:nth-child(3) {
@@ -98,7 +118,6 @@
 #base > .root > .bottom > div:nth-child(3) > div {
   width: 84%;
   height: 80%;
-  border: 1px solid yellow;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -106,8 +125,8 @@
 #base > .root > .bottom > div:nth-child(3) > div > div {
   width: 100%;
   height: 36%;
-  border: 1px solid #30abfd;
   text-align: justify;
+  color: var(--basecolor-1);
 }
 #base > .root > .bottom > div:nth-child(4) {
   width: 35%;
@@ -119,6 +138,6 @@
 #base > .root > .bottom > div:nth-child(4) > div {
   width: 78%;
   height: 30%;
-  border: 1px solid greenyellow;
   text-align: justify;
+  color: var(--basecolor-1);
 }/*# sourceMappingURL=20220504-layout-training-32.css.map */
