@@ -4,33 +4,113 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>똑딱이</title>
+  <title>똑딱이 연습</title>
 </head>
 <body>
   
+    <div id="root">
+      <div>
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+      </div>
 
-  <div id="base">
+      <div>
+        <div class="window">-</div>
+      </div>
 
-    <button class="but-a">A</button>
-    
-    <button class="but-b">B</button>
-
-  </div>
+      <div>
+        <button class="but-a">A</button>
+        <button class="but-b">B</button>
+      </div>
+    </div>
 
   
   <script>
 
-    const base = document.getElementById('base');
-    console.dir(base);
-    base.style.width = '100vw';
-    base.style.height = '100vh';
+    const root = document.querySelector('#root');
+    console.dir(root);
+    root.style.width = '300px';
+    root.style.height = '400px';
+    root.style.border = '1px solid red';
+    root.style.display = 'flex';
+    root.style.justifyContent = 'flex-start';
+    root.style.alignItems = 'center';
+    root.style. flexDirection = 'column';
 
+//
+    const rootBox = root.children[0];
+    console.dir(rootBox);
+    rootBox.style.width = '100%'
+    rootBox.style.height = '30%'
+    rootBox.style.border = '1px solid blue';
+    rootBox.style.display = 'flex';
+    rootBox.style.justifyContent = 'space-between';
+    rootBox.style.alignItems = 'center';
+//
+    for(let i = 0; i < rootBox.children.length; i++) {
+      rootBox.children[i].style.width = '40%';
+      rootBox.children[i].style.height = '100%';
+      rootBox.children[i].style.border = '1px solid gold';
+      rootBox.children[i].style.fontSize = '4rem';
+      rootBox.children[i].style.display = 'flex';
+      rootBox.children[i].style.justifyContent = 'center';
+      rootBox.children[i].style.alignItems = 'center';
+
+      // if(rootBox.children[0]) {
+      // rootBox.children[0].textContent = '1';
+      // }
+
+      // if(rootBox.children[1]) {
+      // rootBox.children[1].textContent = '2';
+      // }
+    }
+//
+    const boxOne = document.getElementsByClassName('box-1');
+    console.dir(boxOne);
+    boxOne[0].textContent  = '1';
+//
+    const boxTwo = document.getElementsByClassName('box-2');
+    console.dir(boxTwo);
+    boxTwo[0].textContent  = '2';
+//
+    const textBox = root.children[1];
+    console.dir(textBox);
+    textBox.style.width = '100%';
+    textBox.style.height = '22%';
+    textBox.style.border = '1px solid blue';
+    textBox.style.display = 'flex';
+    textBox.style.justifyContent = 'center';
+    textBox.style.alignItems = 'center';
+//
+    const alarmText =document.getElementsByClassName('window');
+    console.dir(alarmText);
+    alarmText[0].style.width = '100%';
+    alarmText[0].style.height = '50%';
+    alarmText[0].style.border = '2px solid black';
+    alarmText[0].style.fontSize = '1.5rem';
+    alarmText[0].style.display = 'flex';
+    alarmText[0].style.justifyContent = 'center';
+    alarmText[0].style.alignItems = 'center';
+//
+    const butBox = root.children[2];
+    console.dir(butBox);
+    butBox.style.width = '80%';
+    butBox.style.height = '10%';
+    butBox.style.border = '1px solid red';
+    butBox.style.display = 'flex';
+    butBox.style.justifyContent = 'space-between';
+    butBox.style.alignItems = 'center';
+//
     const butA = document.getElementsByClassName('but-a');
     console.log(butA);
-
+    butA[0].style.width = '100px';
+    butA[0].style.height = '30px';
+//
     const butB = document.getElementsByClassName('but-b');
     console.log(butB);
-
+    butB[0].style.width = '100px';
+    butB[0].style.height = '30px';
+//
     let count = 0;
     let power = true
 
