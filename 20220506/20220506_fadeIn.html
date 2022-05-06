@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>페이드 인</title>
+</head>
+<body>
+  
+  <div id="root"></div>
+  <button id="click-button">click</button>
+
+  <script>
+
+    
+
+
+    const root = document.getElementById('root');
+    console.log(root);
+    root.style.width = '100px';
+    root.style.height = '100px';
+    root.style.backgroundColor = 'aqua';
+
+    const clickBtn = document.getElementById('click-button');
+
+    let opacityValue = 0;
+    let power = true;
+    let a = 0;
+    let sqWidth = '50';
+    let sqHeight = '50';
+    
+    root.style.opacity = opacityValue;
+
+    clickBtn.addEventListener('click', function() {
+      // opacityValue = 1;
+      // root.style.opacity = opacityValue;
+
+
+      let fade = setInterval(function() {
+
+        // if(opacityValue < 1) {
+        //   opacityValue = opacityValue + 0.1;
+        //   root.style.opacity = opacityValue;
+          
+        // } else {
+        //   clearInterval(fade);
+        // }
+
+// --------------------------------------
+
+      //   if(power === true) {
+      //     opacityValue = opacityValue + 0.1;
+      //     root.style.opacity = opacityValue;
+      //     console.log(power);
+      //     console.log(opacityValue);
+          
+      //     if(opacityValue > 1) {
+      //       power = false;
+      //       console.log(power);
+      //     }
+      //   } else {
+      //     opacityValue = opacityValue - 0.1;
+      //     root.style.opacity = opacityValue;
+      //     console.log(power);
+
+      //     if(opacityValue <= 0) {
+      //       power = true;
+      //       clearInterval(fade);
+      //     }
+      //   }
+      // }, 100);
+
+// ----------------------------------------
+
+        if(power === true) {
+
+
+
+          opacityValue = opacityValue + 0.1;
+          root.style.opacity = opacityValue;
+          a++
+
+          sqWidthValue = sqWidth * [opacityValue];
+          sqHeightValue = sqHeight * [opacityValue];
+          console.log(sqWidthValue);
+          root.style.width = sqWidthValue*10 + 'px';
+          root.style.height = sqHeightValue*10 + 'px';
+
+          console.log(power);
+          console.log(opacityValue);
+          console.log(a);
+
+          
+          if(opacityValue >= 1) {
+            power = false;
+            console.log(power);
+            clearInterval(fade);
+          }
+        } else {
+          console.log(power);
+          a = 0;
+          opacityValue = opacityValue - 0.1;
+          root.style.opacity = opacityValue;
+
+            if(opacityValue <= 0) {
+              power = true;
+              root.style.width = '100px';
+              root.style.height = '100px';
+              clearInterval(fade);
+          }
+
+          sqWidthValue = sqWidth * [opacityValue];
+          sqHeightValue = sqHeight * [opacityValue];
+          console.log(sqWidthValue);
+          root.style.width = sqWidthValue*10 + 'px';
+          root.style.height = sqHeightValue*10 + 'px';
+
+        }
+      }, 100);
+
+    });
+
+  </script>
+  
+</body>
+</html>

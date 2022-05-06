@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#base {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#base > .root {
+  width: 840px;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+#base > .root > .top {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+#base > .root > .top > div:nth-child(1) {
+  width: 80%;
+  height: 100%;
+  border: 1px solid #494949;
+  background-color: rgba(240, 248, 255, 0.8);
+  border-radius: 10%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#base > .root > .top > div:nth-child(1) > div {
+  width: 86%;
+  height: 88%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#base > .root > .top > div:nth-child(1) > div > div:nth-child(1) {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#base > .root > .top > div:nth-child(1) > div > div:nth-child(1) > div {
+  width: 10%;
+  height: 100%;
+  background-color: #2600ff;
+}
+#base > .root > .top > div:nth-child(1) > div > div:nth-child(2) {
+  width: 100%;
+  height: 42%;
+}
+#base > .root > .top > div:nth-child(1) > div > div:nth-child(2) > div {
+  width: 76%;
+  height: 100%;
+  font-size: 5.25rem;
+}
+#base > .root > .top > div:nth-child(1) > div > div:nth-child(3) {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#base > .root > .top > div:nth-child(1) > div > div:nth-child(3) > div {
+  width: 100%;
+  height: 90%;
+  text-align: justify;
+}
+#base > .root > .top > div:nth-child(1) > div > div:nth-child(4) {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#base > .root > .top > div:nth-child(1) > div > div:nth-child(4) > div {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+#base > .root > .top > div:nth-child(1) > div > div:nth-child(4) > div > .close-but {
+  width: 90%;
+  height: 76%;
+  background-color: #b4b4b4;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#base > .root > .top > div:nth-child(2) {
+  width: 80%;
+  height: 100%;
+  background-color: #383942;
+  opacity: 0.3;
+  border-radius: 10%;
+  position: absolute;
+  filter: blur(18px);
+  right: 8%;
+  top: 8%;
+}
+#base > .root > .bottom {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#base > .root > .bottom > div {
+  width: 100%;
+  height: 60%;
+  text-align: justify;
+}/*# sourceMappingURL=20220506_layout-training-33.css.map */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./20220506_layout-training-33.css">
+  <title>33</title>
+</head>
+<body>
+  
+<div id="base">
+  <div class="root">
+
+    <div class="top">
+      <div>
+        <div>
+          <div>
+            <div></div>
+          </div>
+
+          <div>
+            <div>LOREM IPSUM</div>
+          </div>
+
+          <div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quis tenetur ea tempore ullam debitis unde fuga similique quae, libero delectus beatae nostrum amet reprehenderit excepturi minus odio, accusamus error. Natus consequuntur esse repellat acium quiat aliquid, doloribus voluptate, officia praesentium ullam.</div>
+          </div>
+
+          <div>
+            <div>
+              <div class="close-but">
+                close
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div></div>
+    </div>
+
+    <div class="bottom">
+      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quidem, nulla nobis ex ad nam reiciendis explicabo sequi dignissimos. Consequuntur enim provident, vero repudiandae, nam voluptatem possimus pariatur tempore culpa ipsam dolorum aliquid consequatur rem obcaecati alias magnam laborum et? Mollitia corporis quia cupiditate recusandae et! Architecto voluptatem, earum numquam quidem libero adipisci velit aliquam, recusandae quae nisi nesciunt at quo aperiam quod vero voluptates, sit quibusdam natus? Dignissimos facere repudiandae, maiores fugiat dicta praesentium rerumeos molestias excepturi, in odit asperiores nisi accusamus dolorum. Eius, iste, exercitationem dolor similique amet dolorum ipsa inventore quam sunt, laudantium dicta sequi aperiam voluptates harum incidunt assumenda. Unde veritatis atque impedit eaque harum alias nemo, nesciunt praesentium rerum eos ea ad nam corrupti cum molestiae. Cupiditate earum sit, sapiente natus nihil quis recusandae repellat ducimus excepturi</div>
+    </div>
+
+  </div>
+</div>
+
+  
+<script>
+
+  const popUp = document.getElementsByClassName('top');
+  console.log(popUp);
+
+  const closeBut = document.getElementsByClassName('close-but');
+  console.log(closeBut);
+
+  closeBut[0].addEventListener('click', function() {
+    popUp[0].style.display = 'none';
+  });
+  
+</script>
+
+</body>
+</html>
