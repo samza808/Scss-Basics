@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modoa-test</title>
+</head>
+<body>
+  
+<div id="base">
+  <div class="root"></div>
+</div>
+
+  <script>
+
+    console.log(document.body.clientWidth);
+
+    const base = document.getElementById('base');
+    console.dir(base);
+    base.style.width = '100vw';
+    base.style.height = '100vh';
+
+    const root = document.querySelector('.root');
+    console.dir(root);
+    root.style.width = '300px';
+    root.style.height = '100px';
+    root.style.fontSize = '3rem';
+    root.style.fontWeight = 'bold';
+    root.style.border = '1px solid black';
+
+    const bodyValue = document.body;
+    let bgColorArr = ['black', 'blue', 'aqua'];
+
+    if(bodyValue.clientWidth > 768) {
+      root.textContent = '1번';
+      root.style.color = bgColorArr[0];
+    } else if(bodyValue.clientWidth < 450) {
+      root.textContent = '3번';
+      root.style.color = bgColorArr[1];
+    } else {
+      root.textContent = '2번';
+      root.style.color = bgColorArr[2];
+    }
+  </script>
+  
+</body>
+</html>

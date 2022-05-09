@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+
+#menu {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.items {
+  width: 80%;
+  background-color: aqua;
+
+}
+
+.on {
+  font-size: 3rem;
+}
+
+</style>
+
+</head>
+<body>
+  <ul id="menu">
+    <li class="items">items-1</li>
+    <li class="items">items-2</li>
+    <li class="items">items-3</li>
+    <li class="items">items-4</li>
+    <li class="items">items-5</li>
+    <li class="items">items-6</li>
+    <li class="items">items-7</li>
+    <li class="items">items-8</li>
+    <li class="items">items-9</li>
+    <li class="items">items-10</li>
+    <li class="items">items-11</li>
+  </ul> 
+
+
+  <script>
+
+    const ul = document.querySelector('#menu');
+    console.log(ul);
+
+    ul.addEventListener('click', function(event) {
+      console.dir(event.target);
+
+      if(event.target.classList.contains('on')) {
+        console.log('클래스에 on이라는 친구가 들어있습니다.');
+        event.target.classList.remove('on');
+      } else {
+        console.log('그런 클래스는 없습니다');
+        event.target.classList.add('on');
+      }
+    } );
+
+  </script>
+
+</body>
+</html>
