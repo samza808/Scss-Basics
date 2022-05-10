@@ -67,26 +67,32 @@
 
     //
 
-    let a = true;
+    let power = true;
+    let a = 0;
+    let opacityValue = 0;
 
     //
 
     menu.addEventListener('click', function() {
       // console.log('test');
 
-      if(a === true) {
+      setInterval(function() {
+
+        if(power === true) {
         console.log('on');
-        a = false;
+        power = false;
 
         root.style.display = 'flex';
 
       } else {
         console.log('off');
-        a = true;
+        power = true;
 
         root.style.display = 'none';
 
       }
+
+      }, 100);
 
     });
 
