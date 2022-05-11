@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    * {margin: 0; padding: 0;}
+
+    #root {
+      width: 100vw;
+      height: 500vh;
+      background-color: #dddddd;
+    }
+
+    #root > section {
+      width: 100vw;
+      height: 1vh;
+      background-color: aquamarine;
+      border: 1px solid black;
+    }
+
+    #root > aside {
+      width: 50vw;
+      height: 1vh;
+      border: 1px solid black;
+      background-color: salmon;
+    }
+    
+  </style>
+</head>
+<body>
+  
+
+<div id="root">
+
+</div>
+
+
+
+<script>
+
+  const maker = document.getElementById('root');
+  let article = document.createElement('article');
+  maker.appendChild(article);
+
+// -------------------------------
+
+  let count = 0;
+  let classCount = 0;
+
+  maker.addEventListener('wheel', function() {
+    console.log('wheel 이벤트가 일어나고 있다.');
+    let section = document.createElement('section');
+    section.setAttribute('id', `section-${count}`);
+    section.textContent = count;
+    maker.appendChild(section);
+    count++;
+  });
+
+  maker.addEventListener('click', function() {
+    console.log('click이벤트가 일어나고 있다.');
+    let aside = document.createElement('aside');
+    aside.setAttribute('class', `test-${classCount}`);
+    aside.textContent = '클릭!';
+    maker.insertBefore(aside, maker.firstChild);
+    classCount++;
+  });
+
+</script>
+
+
+</body>
+</html>

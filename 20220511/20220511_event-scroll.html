@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+
+* {margin: 0; padding: 0;}
+
+#root {
+  width: 100vw;
+  height: 500vh;
+  /* background: linear-gradient(0deg, #f5badc, #83A4ED); */
+}
+
+
+
+</style>
+
+
+
+</head>
+<body>
+  
+  <div id="root"></div>
+
+
+<script>
+
+  const root = document.getElementById('root');
+  console.dir(root);
+
+  mainHeight = document.body.scrollHeight;
+  console.log(mainHeight);
+
+  halfHeight = mainHeight/2;
+  console.log(halfHeight);
+
+  // console.log(window);
+
+  let currentScrollValue = window.scrollY;
+
+  // window.addEventListener('wheel', (event) => {
+  //   console.log(event.offsetY);
+  //   console.log(window.scrollY);
+
+  //   if(event.offsetY >= halfHeight) {
+  //     console.log('확인');
+  //     root.style.backgroundColor = '#c5c5c5';
+  //   }
+    
+  // });
+
+  window.addEventListener('wheel', (event) => {
+    if(window.screenY > 0) {
+      console.log('당신은 방금 스크롤을 내렸습니다');
+      console.log(window.screenY);
+      console.log('전체값' + mainHeight);
+    }
+
+    if(window.screenY >= 2048) {
+      console.log(window.screenY);
+      console.log('야호');
+    }
+  });
+
+</script>
+
+
+</body>
+</html>
