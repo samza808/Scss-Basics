@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미완성</title>
+
+</head>
+<body>
+  
+  <!-- todo: 1번메뉴를 선택했을때 나머지 안보이게 하기 -->
+
+<div id="base">
+
+  <ul class="menu">
+    <li data-list="1">menu-1</li>
+    <li data-list="2">menu-2</li>
+    <li data-list="2">menu-3</li>
+    <li data-list="2">menu-4</li>
+  </ul>
+
+</div>
+
+
+  <script>
+
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+
+    const menu = document.querySelector('.menu');
+    menu.style.width = '400px';
+    menu.style.height = '50px';
+    menu.style.backgroundColor = '#c5c5c5';
+    menu.style.display = 'flex';
+    menu.style.justifyContent = 'space-between';
+
+    for(let i = 0; i < menu.children.length; i++) {
+      menu.children[i].style.listStyle = 'none';
+      menu.children[i].style.border = '1px solid black';
+    }
+
+    const menuOne = document.querySelector('[data-list="1"]')
+    console.log(menuOne);
+
+    console.dir(menu.children[1].dataset);
+
+    let on = true;
+
+    menuOne.addEventListener('click', function() {
+      console.log('test');
+
+      for(let iTow = 1; iTow < menu.children.length; iTow++) {
+        menu.children[iTow].style.display = 'none';
+      }
+
+      // if(menu.children.dataset.list === '2' )
+      // menu.children.style.display = 'none';
+
+    });
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./20220512_layout-training-37.css">
+  <title>스크립트 미완성</title>
+</head>
+<body>
+  
+  <div id="base">
+    <div class="root">
+      <div class="right" data-target="1">
+        <div>
+          <div>
+            <p>BORDERLINE</p>
+            <p>DESIGN</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="good">
+            <div>gooood?</div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi consequuntur velit tempora in dicta. Eveniet quia soluta numquam fugiat natus debitis cumque veniam tempore? Ea animi esse veniam sint ducimus commodi asperiores illo, asperiores aut culpa sunt estaspernatur consequuntur nulla suscipit similique officiis enim ut quibusdam quae officia hic. Sequi quo asperiores aut culpa sunt est delectus earum iusto natus vel suscipit? Nobis harum quibusdam iusto, minima ex, omnis unde hic. Sint, repellat quoearum iusto natus vel susveniam incidunt cum. distinctiovoluptates tempore earum quibusdam perspiciatis illo quam eius soluta porro amet similique consequuntur nulla suscipit similique officiis enim ut quibusdam quae officia hic. Sequi quo asperiores aut culpa sunt est delectus earum iusto natus vel susveniam incidunt cum. asperiores aut culpa sunt
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="left" data-target="2">
+
+        <div class="blur"></div>
+        
+        <div>
+          <div>
+            <p>LOREMM</p>
+            <p>DESIGN</p>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <p>Lorem dolorsit</p>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga deleniti, odio voluptates quaerat assumenda pariatur cupiditate. Officiis vel eaque quos harum! Soluta incidunt, autem culpa cupiditate deleniti corrupti. Assumenda tenetur eaque harum, vero quas est earum ullam quibusdam quisquam neque sint repellendus, cupiditate delectus suscipit molestiae Soluta incidunt, autem culpa cupiditate deleniti corrupti. exercitationem dolorem Assumenda tenetur eaque harureiciendis ipsum quod culpa minima minus rerum adipisci, tempore aliquam quisquam eaque. Aliquam debitis nam explicabo excepturi beatae assumenda placeat, recusandae exercitationem dolorem quidem odit, alias ea perferendis. Officiis eos et impedit id, nihil placeat quo in odio  asperiores
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+
+    const goodBtn = document.querySelector('.good');
+    console.dir(goodBtn);
+//
+    const topPage = document.querySelector('.right')
+    console.dir(topPage);
+    topPage.style.zIndex = '1';
+//
+    const bottomPage = document.querySelector('.left');
+    console.dir(bottomPage);
+    bottomPage.style.zIndex = '0';
+//
+    const topBulr = document.querySelector('.blur');
+    console.dir(topBulr);
+//
+    let topZ = topPage.style.zIndex;
+    let bottomZ = bottomPage.style.zIndex;
+    console.log(bottomZ);
+
+    let a = true;
+    let b = true;
+
+    topPage.addEventListener('click', () => {
+      if(topZ === '1') {
+        topPage.style.zIndex = '0';
+        bottomPage.style.zIndex ='1';
+        console.log(topZ);
+      }
+      
+      if(topZ === '0') {
+        topPage.style.zIndex = '1';
+        bottomPage.style.zIndex = '0';
+      }
+    });
+
+    topBulr.addEventListener('click', () => {
+      
+    });
+
+
+
+  </script>
+
+</body>
+</html>
