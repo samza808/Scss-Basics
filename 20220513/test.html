@@ -4,20 +4,125 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>슬라이드 애니메이션</title>
+
+  <style>
+
+* {margin: 0; padding: 0;}
+
+button {
+  width: 100px;
+  height: 30px;
+}
+
+.wrap {
+  background-color: #7499ff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+  </style>
+
   <title>Document</title>
 </head>
 <body>
   
+  <button class="btn">click</button>
+  
+  <br><br><br>
+
   <div class="wrap">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+    <ul class="menu">
+      <li data-items="1">menu-1</li>
+      <li data-items="2">menu-2</li>
+      <li data-items="3">menu-3</li>
+      <li data-items="4">menu-4</li>
+      <li data-items="5">menu-5</li>
     </ul>
   </div>
 
+
+  <script>
+
+    const wrap = document.querySelector('.wrap');
+    console.dir(wrap);
+    let wrapMinWidth = '100';
+    let wrapMaxWidth = '500';
+
+    wrap.style.width = wrapMinWidth + 'px';
+    wrap.style.height = '700px';
+    wrap.style.transition = '1s';
+
+    const menu = document.querySelector('.menu');
+    console.dir(menu);
+    menu.style.display = 'none';
+
+    const items = document.querySelectorAll('[data-items]');
+    console.dir(items);
+    for(i = 0; i < items.length; i++) {
+      items[i].style.listStyle = 'none'
+      items[i].style.width = '80%';
+      items[i].style.height = '100px';
+      items[i].style.backgroundColor = 'aquamarine';
+    }
+
+    const btn = document.querySelector('.btn');
+    console.dir(btn);
+
+//
+    let a = true;
+    let opacityValue = 0;
+    let b = 0;
+    
+    
+    btn.addEventListener('click', () => {
+      
+      let timer = setInterval(function() {
+  
+        if(a === true) {
+          wrap.style.width = wrapMaxWidth + 'px';
+          menu.style.display = 'flex';
+          opacityValue = opacityValue + 0.1;
+          menu.style.opacity = opacityValue;
+          b++;
+          console.log(a);
+
+          if(opacityValue >= 1) {
+            a = false;
+            console.log(b);
+            clearInterval(timer);
+          }
+        } else {
+          b = 0;
+          wrap.style.width = wrapMinWidth + 'px';
+          opacityValue = opacityValue - 0.1;
+          menu.style.opacity = opacityValue;
+          console.log(a);
+          
+          if(opacityValue <= 0) {
+            a = true;
+            menu.style.display = 'none';
+
+            clearInterval(timer);
+            
+          }
+        }
+  
+      }, 60);
+
+    });
+
+  </script>
 
 </body>
 </html>
