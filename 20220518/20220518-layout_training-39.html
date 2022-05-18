@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>39</title>
+</head>
+<body>
+  
+  <div id="base">
+    <div class="root"></div>
+
+    <button class="click">click!</button>
+  </div>
+
+
+
+  <script>
+
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+
+    const base = document.querySelector('#base');
+    console.log(base);
+
+    base.style.width = '100vw';
+    base.style.height = '100vh';
+    base.style.display = 'flex';
+    base.style.justifyContent = 'center';
+    base.style.alignItems = 'center';
+    base.style.flexDirection = 'column';
+
+//
+
+    const root = document.querySelector('.root');
+    console.log(root);
+
+    root.style.width = '100%';
+    root.style.height = '30%';
+    root.style.display = 'flex';
+    root.style.justifyContent = 'center';
+    root.style.alignItems = 'center';
+
+
+//
+
+    for(let i = 1; i < 10; i++) {
+      let arrNumber = document.createElement('div');
+      arrNumber.style.width = '80px';
+      arrNumber.style.height = '80px';
+      arrNumber.style.background = '#ccc';
+      arrNumber.style.margin = '10px';
+      arrNumber.style.display = 'flex';
+      arrNumber.style.justifyContent = 'center';
+      arrNumber.style.alignItems = 'center';
+      arrNumber.style.transition = '0.5s';
+      arrNumber.innerHTML = i;
+
+      root.appendChild(arrNumber);
+      
+      numberArrDiv = Array.from(root.appendChild, a => i);
+      console.log(numberArrDiv)
+
+      evenNumber = numberArrDiv.filter(value => value % 2 === 0);
+      // console.log(evenNumber);
+      //
+      evenEvery = evenNumber.every(value => typeof(value) === 'null');
+      // console.log(evenEvery);
+      // evenEvery가 false면 짝수
+      //
+
+      OddNumber =  numberArrDiv.filter(value => value % 2 === 1);
+      // console.log(OddNumber);
+      //
+      oddEvery = OddNumber.every(value => typeof(value) === 'null');
+      // console.log(oddEvery);
+      // oddEvery가 false면 홀수
+    }
+
+//
+
+    const bnt = document.querySelector('.click');
+    console.log(bnt);
+
+    bnt.style.width = '100px';
+    bnt.style.height = '40px';
+
+//
+    const addDiv = root.children;
+    console.log(addDiv.length);
+
+    let on = true;
+    let a = 0;
+
+    bnt.addEventListener('click', () => {
+      
+        if(on === true) {
+          console.log('on');
+          on = false;
+          addDiv[a].style.backgroundColor = 'red';
+          a++
+          console.log(a);
+        } else {
+          console.log('off');
+          on = true;
+          addDiv[a].style.backgroundColor = 'blue';
+          a++
+          console.log(a);
+        }
+
+        if(a >= addDiv.length) {
+            a = 0;
+          }
+
+    });
+
+  </script>
+
+</body>
+</html>
