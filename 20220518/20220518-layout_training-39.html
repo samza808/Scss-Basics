@@ -57,25 +57,25 @@
       arrNumber.style.transition = '0.5s';
       arrNumber.innerHTML = i;
 
-      root.appendChild(arrNumber);
+      // root.appendChild(arrNumber);
       
-      numberArrDiv = Array.from(root.appendChild, a => i);
-      console.log(numberArrDiv)
+      // numberArrDiv = Array.from(root.appendChild, a => i);
+      // console.log(numberArrDiv)
 
-      evenNumber = numberArrDiv.filter(value => value % 2 === 0);
-      // console.log(evenNumber);
-      //
-      evenEvery = evenNumber.every(value => typeof(value) === 'null');
-      // console.log(evenEvery);
-      // evenEvery가 false면 짝수
-      //
+      // evenNumber = numberArrDiv.filter(value => value % 2 === 0);
+      // // console.log(evenNumber);
+      // //
+      // evenEvery = evenNumber.every(value => typeof(value) === 'null');
+      // // console.log(evenEvery);
+      // // evenEvery가 false면 짝수
+      // //
 
-      OddNumber =  numberArrDiv.filter(value => value % 2 === 1);
-      // console.log(OddNumber);
-      //
-      oddEvery = OddNumber.every(value => typeof(value) === 'null');
-      // console.log(oddEvery);
-      // oddEvery가 false면 홀수
+      // OddNumber =  numberArrDiv.filter(value => value % 2 === 1);
+      // // console.log(OddNumber);
+      // //
+      // oddEvery = OddNumber.every(value => typeof(value) === 'null');
+      // // console.log(oddEvery);
+      // // oddEvery가 false면 홀수
     }
 
 //
@@ -99,8 +99,8 @@
           console.log('on');
           on = false;
           addDiv[a].style.backgroundColor = 'red';
-          a++
           console.log(a);
+          a++
         } else {
           console.log('off');
           on = true;
@@ -110,7 +110,11 @@
         }
 
         if(a >= addDiv.length) {
+          
+          for(let i = 0; i < addDiv.length; i++) {
+            addDiv[i].style.backgroundColor = '#ccc';
             a = 0;
+            }
           }
 
     });
