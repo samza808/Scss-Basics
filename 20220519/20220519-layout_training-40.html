@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>40</title>
+</head>
+<body>
+
+  <div id="base">
+    <button class="left" data-button="1"><</button>
+
+    <div class="number-wrap">
+      <div data-number="1">1</div>
+      <div data-number="2">2</div>
+      <div data-number="3">3</div>
+      <div data-number="4">4</div>
+      <div data-number="5">5</div>
+    </div>
+
+    <button class="right" data-button="1">></button>
+  </div>
+
+
+
+  <script>
+
+    document.body.style.margin = 0;
+    document.body.style.padding = 0;
+
+    const base = document.querySelector('#base');
+    base.style.width = '100vw';
+    base.style.height = '100vw';
+    base.style.display = 'flex';
+    base.style.justifyContent = 'center';
+    base.style.alignItems = 'center';
+
+
+    const buttonStyle = document.querySelectorAll('[data-button]');
+    console.dir(buttonStyle);
+
+    for(a = 0; a < buttonStyle.length; a++) {
+      buttonStyle[a].style.width = '50px'
+      buttonStyle[a].style.height = '50px'
+    }
+
+    const leftBnt = document.querySelector('.left');
+    const rightBnt = document.querySelector('.right');
+
+    const number = document.querySelector('.number-wrap');
+    number.style.width = '340px';
+    number.style.height = '50px';
+    number.style.display = 'flex';
+    number.style.justifyContent = 'space-around';
+    number.style.alignItems = 'center';
+
+    const numberBnt = document.querySelectorAll('[data-number]');
+
+    for(a = 0; a < numberBnt.length; a++) {
+      numberBnt[a].style.width = '50px';
+      numberBnt[a].style.height = '50px';
+      numberBnt[a].style.display = 'flex';
+      numberBnt[a].style.justifyContent = 'center';
+      numberBnt[a].style.alignItems = 'center';
+      numberBnt[a].style.border = '1px solid blue';
+
+    }
+
+
+    let first = numberBnt[0];
+    let last = numberBnt.length;
+
+    let numberArr = Array.from(numberBnt);
+    console.log(numberArr);
+
+//
+    let test = [];
+    
+    leftBnt.addEventListener('click', () => {
+      numberArr.shift();
+      console.log(numberArr);
+
+
+    });
+
+//
+
+    // rightBnt.addEventListener('click' () => {
+      
+    // });
+
+  </script>
+  
+</body>
+</html>

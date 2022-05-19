@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <span id="test">this is span</span>
+
+  <script>
+
+    const test = document.querySelector('#test');
+
+    console.dir(test);
+
+    function tagNameMaker(element) {
+      if(element.tagName !== '' && element.tagName !== null) {
+        return element.tagName.toLowerCase();
+      }
+    };
+
+    console.log(tagNameMaker(test));
+
+    const makeSpan = document.createElement(tagNameMaker(test));
+    // const makeSpan = document.createElement('span');
+    // 둘 모두 같은 명령
+
+  </script>
+
+</body>
+</html>
