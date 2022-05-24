@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <div id="root"></div>
+
+
+  <script>
+
+    const root = document.getElementById('root');
+    console.log(typeof root);
+    // console.log(root.childNodes);
+
+    for(let propertise in root) {
+      const p = document.createElement('p');
+      p.textContent = propertise;
+      root.appendChild(p);
+      // console.log(propertise);
+
+      let proLenght = root.childNodes.length;
+
+      const proOne = proLenght % 2 === 0;
+      // console.log(proOne);
+
+      if(proOne === true){
+        p.style.color = 'red';
+      } else {
+        p.style.color = '#fff';
+        p.style.backgroundColor = 'blue';
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>

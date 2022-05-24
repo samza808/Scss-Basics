@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+<div id="base">
+
+  <div id="page"></div>
+  
+  <div id="root">
+  
+    <button id="right">
+      <</button> <div id="inject-value">
+  </div>
+  <button id="left">></button>
+  
+  </div>
+
+</div>
+
+
+
+  <script>
+    const arr = [1, 2, 3, 4, 5];
+
+    const base = document.getElementById('base');
+    base.style.width = '100vw';
+    base.style.height = '100vx';
+    base.style.display = 'flex';
+    base.style.justifyContent = 'center';
+    base.style.alignItems = 'center';
+    base.style.flexDirection = 'column';
+
+
+    const page = document.getElementById('page');
+
+    page.style.width = '500px';
+    page.style.height = '200px';
+    page.style.border = '1px solid red';
+
+
+    const root = document.getElementById('root');
+    root.style.width = '400px';
+    root.style.height = '100px';
+    root.style.display = 'flex';
+    root.style.justifyContent = 'center';
+    root.style.alignItems = 'center';
+
+    const injectValue = document.getElementById('inject-value');
+    injectValue.style.width = '340px';
+    injectValue.style.height = '50px';
+
+    const leftBnt = document.getElementById('left');
+    const rightBnt = document.getElementById('right');
+
+    function arrHandler(leftBnt, rightBnt, array, parentNode, appendNode, eventType) {
+
+      parentNode.addEventListener(eventType, function (event) {
+
+        let eventTargetIDValue = event.target.id;
+        // console.log(eventTargetIDValue);
+        let temp;
+
+        const changeArrayIndex = (eventTarget) => {
+
+          if (eventTarget === leftBnt) {
+            temp = array[0];
+            array.shift();
+            array.push(temp);
+            // console.log(array);
+            elementRemover();
+            elementAppender();
+            elementStyler();
+          }
+
+          if (eventTarget === rightBnt) {
+            temp = array[array.length - 1];
+            array.pop();
+            array.unshift(temp);
+            // console.log(array);
+            elementRemover();
+            elementAppender();
+            elementStyler();
+          }
+
+        }
+
+        const elementRemover = () => {
+          while (injectValue.firstChild) {
+
+            injectValue.removeChild(injectValue.firstChild);
+          }
+        }
+        const elementAppender = () => {
+          array.forEach(element => {
+            const number = document.createElement('div');
+            number.textContent = element;
+            appendNode.appendChild(number);
+          });
+        }
+        const elementStyler = () => {
+          injectValue.style.width = '340px';
+          injectValue.style.height = '50px';
+          injectValue.style.display = 'flex';
+          injectValue.style.justifyContent = 'space-around';
+          injectValue.style.alignItems = 'center';
+          injectValue.children[2].style.fontSize = "2rem";
+        }
+
+        // console.dir(injectValue);
+
+        // console.log(eventTargetIDValue);
+
+        // if (eventTargetIDValue === leftBnt) {
+        //   // console.log(`이것은 ${leftBnt}의 id 값입니다.`);
+        //   temp = array[0];
+        //   array.shift();
+        //   array.push(temp);
+        //   console.log(array);
+        // }
+
+        // if (eventTargetIDValue === rightBnt) {
+        //   // console.log(`이것은 ${rightBnt}의 id 값입니다.`);
+        //   temp = array[array.length - 1];
+        //   array.pop();
+        //   array.unshift(temp);
+        //   console.log(array);
+        // }
+
+        changeArrayIndex(eventTargetIDValue);
+
+        if (eventTargetIDValue === parentNode.id) {
+          // console.log(`이것은 컨테이너${parentNode.id}의 id값 입니다`)
+        }
+
+      });
+
+    }
+
+    arrHandler('left', 'right', arr, root, injectValue, 'click');
+  </script>
+
+
+</body>
+
+</html>
