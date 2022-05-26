@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    * {margin: 0; padding: 0;}
+
+    #root {
+      width: 100vw;
+      height: 100vh;
+      background-color: #333;
+      color: #ccc;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div id="root">
+
+    <h1>111</h1>
+    <h2>222</h2>
+
+  </div>
+
+
+  <script>
+    const root = document.getElementById('root');
+    // console.log(root);
+    console.dir(root);
+
+    let totalHeight = root.offsetHeight;
+    let oneTotalH = totalHeight / 100;
+
+
+    let bgColorValue = 0;
+    let bgColor = `rgb(${bgColorValue},${bgColorValue},${bgColorValue})`;
+
+    // root.style.backgroundColor = bgColor;
+
+    // let a = 255 / 100
+    // console.log(a * 35);
+
+    // let a35Round = Math.round(a * 35);
+    // console.log(a35Round);
+
+
+    // root. addEventListener('mousemove', (event) => {
+
+    //   // console.log(event.offsetX);
+    //   console.log(event.offsetY);
+    //   root.children[0].textContent = event.offsetX;
+    //   root.children[1].textContent = event.offsetY;
+
+    // });
+
+  </script>
+
+</body>
+</html>
