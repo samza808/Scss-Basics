@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    // console.dir(document.body);
+    
+    // const section = document.createElement('section');
+    // root.appendChild(section);
+    // document.body.appendChild(root);
+
+// -----------------------------------------------
+
+    // const root = document.createElement('div');
+    // document.body.appendChild(root);
+    // // 위, 아래 둘은 같은 결과를 낸다.
+    // document.body.appendChild(document.createElement('div'));
+
+// ------------------------------------------------
+
+    const root = document.createElement('div');
+    document.body.appendChild(root);
+
+    const ul = document.createElement('ul');
+    root.appendChild(ul);
+
+    const array = ['img-1.jpg'];
+
+    let timer = setTimeout(() => {
+      
+      for(let i = 0; i < 100; i++) {
+        const li = document.createElement('li');
+        const img = document.createElement('img');
+        img.setAttribute('src', `images/images/images-[i].jpg`); //파일이름에 숫자가 붙어야
+        img.classList.add('넣고싶은 클래스') //스타일링도 끝남
+        img.style.width = '100px';
+        li.appendChild(img);
+        ul.appendChild(li);
+      }
+
+    },1000);
+
+  </script>
+  
+</body>
+</html>
