@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./imageOne.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="base">
+    <div id="root">
+
+      <div class="one">
+        <img src="./인물.png" alt="">
+      </div>
+      <div class="two">
+        <img src="./글씨.png" alt="">
+      </div>
+      <div class="three">
+        <img src="./배경.png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+
+    const one = document.querySelectorAll('.one');
+    console.log(one);
+
+    const two = document.querySelectorAll('.two');
+    console.log(two);
+
+    const three = document.querySelectorAll('.three');
+    console.log(three);
+
+    one[0].addEventListener('click', () => {
+      // console.dir(two[0]);
+      two[0].style.zIndex = '2';
+    });
+
+  </script>
+
+</body>
+</html>
